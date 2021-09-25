@@ -1,0 +1,70 @@
+.main-layout {
+    main {
+        height: 95vh;
+        overflow: scroll;
+    }
+}
+footer {
+    @mixin footer-span-mixin {
+        margin: 0.5vh 0;
+        color: gray;
+        font-size: 1.5vh;
+    }
+
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    padding: 0 10vw;
+    box-sizing: border-box;
+    overflow-y: visible;
+
+    .icon__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        &.is-current {
+            span, i {
+                color: #409EFF;
+            }
+        }
+
+        span {
+            @include footer-span-mixin;
+        }
+    }
+
+    .add-button {
+        width: 7vh;
+        height: 7vh;
+        border-radius: 50%;
+        box-shadow: 0 -0.3vh 5px 0px #00000022;
+        padding: 0.75vh;
+        box-sizing: border-box;
+
+        &__wrapper {
+            text-align: center;
+
+            span {
+                @include footer-span-mixin;
+
+                display: inline-block;
+            }
+        }
+
+        & > div {
+            border-radius: 50%;
+            background: #409EFF;
+            color: white;
+            font-size: 5vh;
+            height: 100%;
+            line-height: 4.8vh;
+            text-align: center;
+            box-shadow: 0.2vh 0.2vh 5px 0 #409EFFBB;
+        }
+    }
+}

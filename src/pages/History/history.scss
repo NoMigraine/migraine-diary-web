@@ -1,0 +1,58 @@
+@font-face {
+    font-family:  DateFont;
+    src: url('/fonts/GLSB.ttf');
+    font-display: swap;
+}
+
+.history-page {
+    display: flex;
+    
+    .week-calendar {
+        width: 20vw;
+        // max-width: 150px;
+        height: 60vh;
+        margin-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .week-day-cell {
+            font-family: DateFont;
+            text-align: center;
+            transition: font-size 0.5s;
+
+            &.day {
+                &-current {
+                    font-size: 6vw;
+                }
+                &-side {
+                    font-size: 4.5vw;
+                }
+                &-normal {
+                    font-size: 3vw;
+                }
+                &-invalid {
+                    opacity: 0.5;
+                }
+            }
+            
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .week-notes {
+        padding: 3vh 5vw;
+        width: 80vw;
+        height: 83vh;
+        overflow-y: auto;
+        .note-container {
+            height: 60vh;
+            width: 100%;
+            background: lightgray;
+            border-radius: 20px;
+            margin-bottom: 2vh;
+        }
+    }
+}
